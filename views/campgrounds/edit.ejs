@@ -1,0 +1,12 @@
+<% include ../partials/header %>
+
+<h1>Edit <%= campground.name %></h1>
+
+<form action="/campgrounds/<%= campground._id %>?_method=PUT" method="post">
+    <input type="text" value="<%= campground.name %>" name="campground[name]">
+    <input type="text" value="<%= campground.image %>" name="campground[image]">
+    <input type="text" value="<%= campground.description %>" name="campground[description]">
+    <button class="btn btn-md btn-primary">Update</button>
+</form>
+
+<% include ../partials/footer %>
